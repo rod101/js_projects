@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<iframe src="mainpage.html" width="800px" height="500px" name="iff"></iframe>
+<br>
+<input type="button" name="back" value="Back" onclick="ownBack()">
+<input type="button" name="back" value="Home" onclick="ownHome()">
+<input type="button" name="back" value="Forward" onclick="ownForward()">
+
+<script type="text/javascript">
+function ownBack() {
+    window.history.back();
+}
+function ownHome() {
+    var site = "mainpage.html";
+    document.getElementsByName('iff')[0].src = site;
+}
+function ownForward() {
+    window.history.forward();
+}
+</script>
+</body>
+</html>
