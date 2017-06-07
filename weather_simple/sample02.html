@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title></title>
+</head>
+<body>
+
+  <div id="weather"></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.simpleWeather.min.js"></script>
+  <script>
+    $.simpleWeather({
+      woeid: '2357536',
+      location: 'johannesburg',
+      unit: 'c',
+
+      success: function(weather)
+      {
+        html = '<h3>City: ' + weather.city + '</h3>';
+        html += '<h3>Title: '+ weather.title +'</h3>';
+        html += '<h3>Day: ' + weather.forecast[0].day + '</h3>';
+        html += '<h3> Tempreture: '+ weather.temp+'</h3>';
+        html += '<h3> alt temp: ' + weather.alt.temp +'</h3>';
+        html += '<h3> Condition Codes: ' + weather.code +'</h3>';
+        html += '<h3> Today Code: ' + weather.todayCode +'</h3>';
+        html += '<h3> Units Temp: ' + weather.units.temp +'</h3>';
+        html += '<h3> Units Distance: ' + weather.units.distance +'</h3>';
+        html += '<h3> Units Pressure: ' + weather.units.pressure +'</h3>';
+        html += '<h3> units.speed' + weather.units.speed +'</h3>';
+        html += '<h3> alt.unit' + weather.alt.unit +'</h3>';
+        html += '<h3> currently' + weather.currently +'</h3>';
+        html += '<h3> high' + weather.high +'</h3>';
+        html += '<h3> alt.high' + weather.alt.high +'</h3>';
+        html += '<h3> low' + weather.low +'</h3>';
+        html += '<h3> alt.low' + weather.alt.low +'</h3>';
+        html += '<h3> text' + weather.text +'</h3>';
+        html += '<h3> wind.chill' + weather.wind.chill +'</h3>';
+        html += '<h3> wind.direction' + weather.wind.direction +'</h3>';
+        html += '<h3> ' + weather.wind.speed +'</h3>';
+        html += '<h3> ' + weather.humidity +'</h3>';
+        html += '<h3> ' + weather.heatindex +'</h3>';
+        html += '<h3> ' + weather.pressure +'</h3>';
+        html += '<h3> ' + weather.rising +'</h3>';
+        html += '<h3> ' + weather.visibility +'</h3>';
+        html += '<h3> ' + weather.sunrise +'</h3>';
+        html += '<h3> ' + weather.sunset +'</h3>';
+        html += '<h3> ' + weather.thumbnail +'</h3>'+ '<img src="'+ weather.thumbnail +'">';
+        html += '<h3> ' + weather.image +'</h3>' + '<img src="'+ weather.image +'">';
+        html += '<h3> ' + weather.forecast[0].high +'</h3>';
+        html += '<h3> ' + weather.forecast[0].alt.high +'</h3>';
+        html += '<h3> ' + weather.forecast[0].low +'</h3>';
+        html += '<h3> ' + weather.forecast[0].alt.low +'</h3>';
+        html += '<h3> ' + weather.forecast[0].text +'</h3>';
+        html += '<h3> ' + weather.forecast[0].code +'</h3>';
+        html += '<h3> ' + weather.forecast[0].date +'</h3>';
+        html += '<h3> ' + weather.forecast[0].day +'</h3>';
+        html += '<h3> ' + weather.forecast[0].image +'</h3>';
+        html += '<h3> ' + weather.forecast[0].thumbnail +'</h3>';
+        html += '<h3> ' + weather.city +'</h3>';
+        html += '<h3> ' + weather.country +'</h3>';
+        html += '<h3> ' + weather.region +'</h3>';
+        html += '<h3> ' + weather.updated +'</h3>';
+        html += '<h3> ' + weather.link +'</h3>';
+
+        $("#weather").html(html);
+      },
+      error: function(error)
+      {
+        $("#weather").html('<p>'+error+'</p>');
+      }
+
+
+    });
+  </script>
+</body>
+</html>
