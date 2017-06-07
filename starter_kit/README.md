@@ -1,5 +1,10 @@
-#Mini JS, HTML Starter kit
-This is a quick starter kit for developing small project and for most of the little projects am going to put up here
+# ReadMe
+This is a quick starter kit for developing small project and for of the little projects am going to put up here
 
-# Read Me Project Title
-what the project is abou
+# Mini JS, HTML Starter kit
+Clone this Repo to start a new project
+
+### This project include ###
+* jquery
+* css
+* js
